@@ -1,36 +1,32 @@
-/* Alap beállítások és háttérszín */
 body {
-    background-color: #ffe6e6; /* Halvány rózsaszín háttér */
-    font-family: 'Varela Round', sans-serif; /* Cuki kerek betűtípus */
+    background-color: #fc00da50;
+    font-family: 'Varela Round', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Teljes képernyő magasság */
+    height: 100vh;
     margin: 0;
     text-align: center;
     overflow: hidden;
 }
 
-/* A konténer stílusa */
 .container {
-    background-color: rgba(255, 255, 255, 0.8); /* Félig átlátszó fehér doboz */
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(255, 105, 180, 0.2);
     max-width: 90%;
 }
 
-/* A főcím stílusa */
 .focim {
-    color: #ff4d79; /* Sötétebb rózsaszín */
-    font-family: 'Pacifico', cursive; /* Kézírásos betűtípus */
+    color: #ff4d79;
+    font-family: 'Pacifico', cursive;
     font-size: 3em;
     margin-bottom: 30px;
 }
 
-/* Gombok közös stílusa */
 button {
-    font-size: 1.2em;
+    font-size: 1.5em;
     padding: 10px 30px;
     margin: 10px;
     border: none;
@@ -41,27 +37,21 @@ button {
     font-weight: bold;
 }
 
-/* Gombok animációja (ha ráviszed az egeret) */
 button:hover {
-    transform: scale(1.1); /* Kicsit megnő */
+    transform: scale(1.1);
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* IGEN gomb */
 #igen-gomb {
-    background-color: #4CAF50; /* Zöld */
+    background-color: #4CAF50;
     color: white;
 }
 
-/* NEM gomb */
 #nem-gomb {
-    background-color: #ff4d4d; /* Piros */
+    background-color: #ff0000;
     color: white;
 }
 
-/* --- A sikeres oldal stílusa --- */
-
-/* Rejtett osztály (ezzel tüntetjük el a dolgokat) */
 .rejtett {
     display: none;
 }
@@ -74,7 +64,7 @@ button:hover {
 }
 
 .kep {
-    width: 250px; /* Kép mérete */
+    width: 250px;
     border-radius: 15px;
     margin: 20px 0;
 }
@@ -83,4 +73,23 @@ button:hover {
     color: #ff0000;
     font-size: 2em;
     font-weight: bold;
+    font-family:'Times New Roman', Times, serif; 
+}
+
+.liliom {
+    position: absolute;
+    width: 80px;
+    opacity: 0.8;
+    z-index: -1;
+    animation: lebeges 3s ease-in-out infinite alternate;
+}
+
+.l1 { top: 5%; left: 5%; }
+.l2 { top: 5%; right: 5%; animation-delay: 0.5s; }
+.l3 { bottom: 5%; left: 5%; animation-delay: 1s; }
+.l4 { bottom: 5%; right: 5%; animation-delay: 1.5s; }
+
+@keyframes lebeges {
+    from { transform: translateY(0px) rotate(0deg); }
+    to { transform: translateY(15px) rotate(10deg); }
 }
